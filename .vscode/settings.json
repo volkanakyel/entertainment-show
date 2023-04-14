@@ -2,5 +2,6 @@
   "cSpell.words": [
     "nuxt",
     "vuetify"
-  ]
+  ],
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }

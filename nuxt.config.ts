@@ -1,10 +1,9 @@
 import vuetify from "vite-plugin-vuetify";
+import { defineNuxtConfig } from "nuxt/config";
 
 // PWA Config
 const title = "Entertainment Show";
-const shortTitle = "Entertainment Tv";
-const description =
-  "Start discover your favorite content";
+const description = "Start discover your favorite content";
 const image = "https://vuetify3nuxt3starter.behonbaker.com/starter.png";
 const url = "https://vuetify3nuxt3starter.behonbaker.com/";
 
@@ -12,16 +11,26 @@ const url = "https://vuetify3nuxt3starter.behonbaker.com/";
 export default defineNuxtConfig({
   // import styles
   css: ["@/assets/main.scss"],
+  vite: {
+    // @ts-ignore
+    // curently this will lead to a type error, but hopefully will be fixed soon #justBetaThings
+    ssr: {
+      noExternal: ["vuetify"], // add the vuetify vite plugin
+    },
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: '@import "@/assets/abstracts/_variables.scss";',
+        },
+      },
+    },
+  },
   // enable takeover mode
   typescript: { shim: false },
   build: { transpile: ["vuetify"] },
   modules: [
-    "@kevinmarrec/nuxt-pwa",
     async (options, nuxt) => {
-      nuxt.hooks.hook("vite:extendConfig", (config) =>
-        // @ts-ignore
-        config.plugins.push(vuetify())
-      );
+      nuxt.hooks.hook("vite:extendConfig", (config: any) => config.plugins.push(vuetify()));
     },
   ],
 
@@ -91,21 +100,6 @@ export default defineNuxtConfig({
           content: image,
         },
       ],
-    },
-  },
-
-  pwa: {
-    meta: {
-      name: shortTitle,
-      author: "Behon Baker",
-      theme_color: "#4f46e5",
-      description: description,
-    },
-    manifest: {
-      name: shortTitle,
-      short_name: shortTitle,
-      theme_color: "#4f46e5",
-      description: description,
     },
   },
 });
