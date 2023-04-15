@@ -1,4 +1,3 @@
-import vuetify from "vite-plugin-vuetify";
 import { defineNuxtConfig } from "nuxt/config";
 
 // PWA Config
@@ -14,9 +13,6 @@ export default defineNuxtConfig({
   vite: {
     // @ts-ignore
     // curently this will lead to a type error, but hopefully will be fixed soon #justBetaThings
-    ssr: {
-      noExternal: ["vuetify"], // add the vuetify vite plugin
-    },
     css: {
       preprocessorOptions: {
         scss: {
@@ -27,12 +23,6 @@ export default defineNuxtConfig({
   },
   // enable takeover mode
   typescript: { shim: false },
-  build: { transpile: ["vuetify"] },
-  modules: [
-    async (options, nuxt) => {
-      nuxt.hooks.hook("vite:extendConfig", (config: any) => config.plugins.push(vuetify()));
-    },
-  ],
 
   app: {
     head: {

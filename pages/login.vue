@@ -1,7 +1,5 @@
 <template>
-  <v-app>
-    <v-container> Login </v-container>
-  </v-app>
+  <div></div>
 </template>
 
 <script lang="ts" setup></script>
