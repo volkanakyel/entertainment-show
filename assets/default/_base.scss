@@ -1,7 +1,46 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
 body {
   font-family: $family;
   background-color: $primary-dark-blue;
   font-size: $fs-body-m;
   font-weight: $fw-medium;
   color: $primary-white;
+  height: 100vh;
+  line-height: 23px;
+}
+
+.show-search {
+  position: relative;
+  width: 100%;
+  img {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translate(-50%, -50%);
+  }
+  input {
+    border: none;
+    background-color: $primary-dark-blue;
+
+    color: $primary-white;
+    outline: none;
+    padding: 16px;
+    margin-left: 24px;
+    font-size: 24px;
+    width: 100%;
+    font-weight: 300;
+    line-height: 30px;
+    caret-color: $primary-red;
+    &:focus {
+      border-bottom: 1px solid $greyish-blue;
+      transition: border 0.3s linear;
+    }
+  }
 }

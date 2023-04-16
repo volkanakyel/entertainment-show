@@ -1,18 +1,22 @@
 <template>
-  <div></div>
+  <div class="login-page">
+    <div class="login-container">
+      <p>Login</p>
+    </div>
+  </div>
 </template>
 
 <script lang="ts" setup></script>
 
 <style lang="scss" scoped>
-.v-container {
+.login-page {
+  position: relative;
+  height: 100vh;
+}
+.login-container {
   position: absolute;
-  left: 50%;
   top: 50%;
-  max-width: 400px;
-  border-radius: 20px;
-  transform: translate(-50%, -50%);
-  padding: 32px;
-  background-color: #161d2f;
+  left: 50%;
+  width: 400px;
 }
 </style>
