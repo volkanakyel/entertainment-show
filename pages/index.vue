@@ -26,7 +26,6 @@
 }
 
 .navbar {
-  flex: 0 1 200px; /* Positive flex-shrink */
 }
 .show-container {
   flex: 1 1 auto; /* Positive flex-shrink */

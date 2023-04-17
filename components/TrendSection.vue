@@ -32,7 +32,7 @@
 
 <script lang="ts" setup>
 import { ref, onMounted, computed } from "vue";
-const slider = ref<HTMLDivElement>();
+const slider = ref<any>();
 let isDown = false;
 let startX = 0;
 let scrollLeft: any;
@@ -42,7 +42,6 @@ const isActive = computed(() => {
 });
 
 const startDragging = function (e: any) {
-  // console.log(startX);
   isDown = true;
   startX = e.pageX - slider.value.offsetLeft;
   scrollLeft = slider.value.scrollLeft;
@@ -55,7 +54,6 @@ const mouveMouse = (e: any) => {
   if (!isDown) return;
   const x = e.pageX - slider.value.offsetLeft;
   const walk = (x - startX) * 3; //scroll-fast
-  // console.log(startX);
   slider.value.scrollLeft = scrollLeft - walk;
 };
 onMounted(() => {
