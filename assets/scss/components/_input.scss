@@ -1,38 +1,26 @@
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
-}
-
-body {
-  font-family: $family;
-  background-color: $primary-dark-blue;
-  font-size: $fs-body-m;
-  font-weight: $fw-medium;
-  color: $primary-white;
-  height: 100vh;
-  line-height: 23px;
-}
-
-.show-search {
+.search-input {
   position: relative;
+  margin-top: 32px;
   width: 100%;
-  img {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  &__icon {
     position: absolute;
-    top: 50%;
+    bottom: 0;
     left: 10px;
     transform: translate(-50%, -50%);
   }
-  input {
+  &__field {
     border: none;
     background-color: $primary-dark-blue;
-
     color: $primary-white;
     outline: none;
+    padding-bottom: 12px;
     font-size: 24px;
     width: 100%;
+    margin-left: 56px;
     font-weight: 300;
     line-height: 30px;
     caret-color: $primary-red;

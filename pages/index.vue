@@ -4,9 +4,13 @@
       <SideNavbar />
     </div>
     <div class="show-container">
-      <div class="show-search">
-        <img src="../assets/img/search-icon.svg" alt="" />
-        <input class="show-search-input" type="text" placeholder="Search for movies or TV series" />
+      <div class="search-input">
+        <img class="search-input__icon" src="../assets/img/search-icon.svg" alt="" />
+        <input
+          class="search-input__field"
+          type="text"
+          placeholder="Search for movies or TV series"
+        />
       </div>
       <TrendSection />
       <RecommendSection />
@@ -26,9 +30,5 @@
 }
 .show-container {
   flex: 1 1 auto; /* Positive flex-shrink */
-}
-
-.show-search {
-  margin-top: 32px;
 }
 </style>

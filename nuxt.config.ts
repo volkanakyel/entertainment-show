@@ -9,14 +9,14 @@ const url = "https://vuetify3nuxt3starter.behonbaker.com/";
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   // import styles
-  css: ["@/assets/main.scss"],
+  css: ["@/assets/scss/main.scss"],
   vite: {
     // @ts-ignore
     // curently this will lead to a type error, but hopefully will be fixed soon #justBetaThings
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: '@import "@/assets/abstracts/_variables.scss";',
+          additionalData: '@import "@/assets/scss/abstracts/_variables.scss";',
         },
       },
     },

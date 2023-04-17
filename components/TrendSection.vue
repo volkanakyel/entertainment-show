@@ -94,7 +94,7 @@ onMounted(() => {
     transform: scale(0.98);
     will-change: transform;
     user-select: none;
-    cursor: pointer;
+    cursor: grab;
   }
 }
 .trending-section-card {
