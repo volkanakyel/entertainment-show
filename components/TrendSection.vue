@@ -94,6 +94,10 @@ onMounted(() => {
     will-change: transform;
     user-select: none;
     cursor: grab;
+    overflow-x: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 }
 .trending-section-card {
