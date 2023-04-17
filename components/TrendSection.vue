@@ -46,7 +46,7 @@ const startDragging = function (e: any) {
   startX = e.pageX - slider.value.offsetLeft;
   scrollLeft = slider.value.scrollLeft;
 };
-const stopDragging = function (event: any) {
+const stopDragging = function () {
   isDown = false;
 };
 
