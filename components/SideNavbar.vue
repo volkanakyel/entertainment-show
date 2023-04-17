@@ -29,6 +29,10 @@
   @media (max-width: 800px) {
     height: auto;
   }
+  @media (max-width: 450px) {
+    margin: 0;
+    border-radius: 0;
+  }
   &__logo {
     width: 32px;
     height: 25px;
@@ -59,6 +63,7 @@
     gap: 40px;
     @media (max-width: 800px) {
       flex-direction: row;
+      gap: 24px;
     }
   }
 }

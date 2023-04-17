@@ -28,5 +28,8 @@
       border-bottom: 1px solid $greyish-blue;
       transition: border 0.3s linear;
     }
+    @media (max-width: 800px) {
+      flex-direction: column;
+    }
   }
 }

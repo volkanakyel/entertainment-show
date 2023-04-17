@@ -63,7 +63,7 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 .trending-section {
-  margin-top: 32px;
+  margin-top: 24px;
   &__container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -98,7 +98,7 @@ onMounted(() => {
 }
 .trending-section-card {
   &:not(:first-child) {
-    margin: 2em 1em;
+    margin: 0 1em;
   }
   display: inline-block;
   img {
