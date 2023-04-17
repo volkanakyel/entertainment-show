@@ -1,6 +1,8 @@
 <template>
   <div class="main-container">
-    <SideNavbar />
+    <div class="navbar">
+      <SideNavbar />
+    </div>
     <div class="show-container">
       <div class="show-search">
         <img src="../assets/img/search-icon.svg" alt="" />
@@ -18,9 +20,14 @@
 .main-container {
   display: flex;
 }
-.show-container {
-  max-width: 1100px;
+
+.navbar {
+  flex: 0 1 200px; /* Positive flex-shrink */
 }
+.show-container {
+  flex: 1 1 auto; /* Positive flex-shrink */
+}
+
 .show-search {
   margin-top: 32px;
 }
