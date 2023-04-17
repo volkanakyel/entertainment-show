@@ -23,11 +23,17 @@
 <style scoped lang="scss">
 .main-container {
   display: flex;
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
 }
 
 .navbar {
 }
 .show-container {
   flex: 1 1 auto; /* Positive flex-shrink */
+  @media (max-width: 800px) {
+    margin: 32px;
+  }
 }
 </style>

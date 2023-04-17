@@ -13,7 +13,7 @@
           @mousedown="startDragging"
         >
           <div class="trending-section-card">
-            <img src="../assets/img/thumbnails/1998/trending/small.jpg" alt="" />
+            <img src="../assets/img/thumbnails/beyond-earth/trending/small.jpg" alt="" />
           </div>
           <div class="trending-section-card">
             <img src="../assets/img/thumbnails/1998/trending/small.jpg" alt="" />
@@ -81,6 +81,7 @@ onMounted(() => {
     overflow: hidden;
     color: #fff;
     font-size: 1em;
+    width: 100%;
     font-weight: 700;
   }
   &__card-list {
@@ -96,7 +97,9 @@ onMounted(() => {
   }
 }
 .trending-section-card {
-  margin: 2em 1em;
+  &:not(:first-child) {
+    margin: 2em 1em;
+  }
   display: inline-block;
   img {
     border-radius: 20px;

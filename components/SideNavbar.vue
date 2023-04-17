@@ -26,6 +26,9 @@
   background-color: $semi-dark-blue;
   height: 85vh;
   max-height: 960px;
+  @media (max-width: 800px) {
+    height: auto;
+  }
   &__logo {
     width: 32px;
     height: 25px;
@@ -37,6 +40,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    @media (max-width: 800px) {
+      flex-direction: row;
+    }
   }
   &__nav-icon {
     width: 20px;
@@ -51,6 +57,9 @@
     flex-direction: column;
     align-items: center;
     gap: 40px;
+    @media (max-width: 800px) {
+      flex-direction: row;
+    }
   }
 }
 </style>
