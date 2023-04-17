@@ -13,16 +13,36 @@
           @mousedown="startDragging"
         >
           <div class="trending-section-card">
-            <img src="../assets/img/thumbnails/beyond-earth/trending/small.jpg" alt="" />
+            <img class="trending-section-card__save" src="../assets/img/save-icon.svg" alt="" />
+            <img
+              class="trending-section-card__image"
+              src="../assets/img/thumbnails/beyond-earth/trending/small.jpg"
+              alt=""
+            />
           </div>
           <div class="trending-section-card">
-            <img src="../assets/img/thumbnails/1998/trending/small.jpg" alt="" />
+            <img class="trending-section-card__save" src="../assets/img/save-icon.svg" alt="" />
+            <img
+              class="trending-section-card__image"
+              src="../assets/img/thumbnails/1998/trending/small.jpg"
+              alt=""
+            />
           </div>
           <div class="trending-section-card">
-            <img src="../assets/img/thumbnails/1998/trending/small.jpg" alt="" />
+            <img class="trending-section-card__save" src="../assets/img/save-icon.svg" alt="" />
+            <img
+              class="trending-section-card__image"
+              src="../assets/img/thumbnails/1998/trending/small.jpg"
+              alt=""
+            />
           </div>
           <div class="trending-section-card">
-            <img src="../assets/img/thumbnails/1998/trending/small.jpg" alt="" />
+            <img class="trending-section-card__save" src="../assets/img/save-icon.svg" alt="" />
+            <img
+              class="trending-section-card__image"
+              src="../assets/img/thumbnails/1998/trending/small.jpg"
+              alt=""
+            />
           </div>
         </div>
       </div>
@@ -101,12 +121,23 @@ onMounted(() => {
   }
 }
 .trending-section-card {
+  position: relative;
+
   &:not(:first-child) {
-    margin: 0 1em;
+    margin: 0 40px;
   }
   display: inline-block;
-  img {
+  &__image {
     border-radius: 20px;
+  }
+  &__save {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+  &:hover {
+    transition: opacity 0.1s ease;
+    opacity: 0.5;
   }
 }
 .section-title {
