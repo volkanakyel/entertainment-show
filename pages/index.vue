@@ -5,7 +5,7 @@
     </div>
     <div class="show-container">
       <div class="search-input">
-        <img class="search-input__icon" src="../assets/img/search-icon.svg" alt="" />
+        <img class="search-input__icon" src="../public/img/search-icon.svg" alt="" />
         <input
           class="search-input__field"
           type="text"

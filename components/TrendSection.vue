@@ -27,7 +27,7 @@
             <div class="trending-section-card__save">
               <img
                 class="trending-section-card__save-icon"
-                src="../assets/img/save-icon.svg"
+                src="../public/img/save-icon.svg"
                 alt=""
               />
             </div>
@@ -53,8 +53,8 @@ const getTrendingShows = computed(() => {
 
 const getCategoryIcon = (category: string) => {
   return category === "Movie"
-    ? "/_nuxt/assets/img/card-icons/movie.svg"
-    : "/_nuxt/assets/img/card-icons/series.svg";
+    ? "/_nuxt/public/img/card-icons/movie.svg"
+    : "/_nuxt/public/img/card-icons/series.svg";
 };
 
 const slider = ref<any>();

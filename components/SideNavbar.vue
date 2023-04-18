@@ -2,14 +2,14 @@
   <div class="side-navbar">
     <div class="side-navbar__container">
       <div class="side-navbar__nav-items">
-        <img class="side-navbar__logo" src="../assets/img/logo.svg" alt="" />
-        <img class="side-navbar__nav-icon" src="../assets/img/menu-icon.svg" alt="" />
-        <img class="side-navbar__nav-icon" src="../assets/img/movie-icon.svg" alt="" />
-        <img class="side-navbar__nav-icon" src="../assets/img/series-icon.svg" alt="" />
-        <img class="side-navbar__nav-icon" src="../assets/img/save-icon.svg" alt="" />
+        <img class="side-navbar__logo" src="../public/img/logo.svg" alt="" />
+        <img class="side-navbar__nav-icon" src="../public/img/menu-icon.svg" alt="" />
+        <img class="side-navbar__nav-icon" src="../public/img/movie-icon.svg" alt="" />
+        <img class="side-navbar__nav-icon" src="../public/img/series-icon.svg" alt="" />
+        <img class="side-navbar__nav-icon" src="../public/img/save-icon.svg" alt="" />
       </div>
       <div class="side-navbar__avatar">
-        <img src="../assets/img/avatar.svg" alt="" />
+        <img src="../public/img/avatar.svg" alt="" />
       </div>
     </div>
   </div>

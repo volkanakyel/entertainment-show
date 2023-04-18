@@ -4,7 +4,7 @@
     <div class="trending-section__card-list">
       <div v-for="trendShow in getRecommendedShow" class="trending-section-card">
         <div class="trending-section__save">
-          <img class="trending-section__save-icon" src="../assets/img/save-icon.svg" alt="" />
+          <img class="trending-section__save-icon" src="../public/img/save-icon.svg" alt="" />
         </div>
         <img
           class="trending-section-card__image"
@@ -35,8 +35,8 @@ const getRecommendedShow = computed(() => {
 
 const getCategoryIcon = (category: string) => {
   return category === "Movie"
-    ? "/_nuxt/assets/img/card-icons/movie.svg"
-    : "/_nuxt/assets/img/card-icons/series.svg";
+    ? "/_nuxt/public/img/card-icons/movie.svg"
+    : "/_nuxt/public/img/card-icons/series.svg";
 };
 </script>
 
