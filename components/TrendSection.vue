@@ -13,6 +13,17 @@
           @mousedown="startDragging"
         >
           <div v-for="trendShow in getTrendingShows" class="trending-section-card">
+            <div class="trending-section-card__content">
+              <div class="trending-section-card__description">
+                <p>{{ trendShow.year }}</p>
+                <div class="trending-section-card__section">
+                  <img width="12" height="12" :src="getCategoryIcon(trendShow.category)" alt="" />
+                  <p>{{ trendShow.category }}</p>
+                </div>
+                <p>{{ trendShow.rating }}</p>
+              </div>
+              {{ trendShow.title }}
+            </div>
             <div class="trending-section-card__save">
               <img
                 class="trending-section-card__save-icon"
@@ -39,6 +50,12 @@ import { showData } from "../data/data";
 const getTrendingShows = computed(() => {
   return showData.filter((show) => show.isTrending);
 });
+
+const getCategoryIcon = (category: string) => {
+  return category === "Movie"
+    ? "/_nuxt/assets/img/card-icons/movie.svg"
+    : "/_nuxt/assets/img/card-icons/series.svg";
+};
 
 const slider = ref<any>();
 let isDown = false;
@@ -107,11 +124,30 @@ const mouveMouse = (e: any) => {
 }
 .trending-section-card {
   position: relative;
-
+  display: inline-block;
   &:not(:first-child) {
     margin-left: 40px;
   }
-  display: inline-block;
+  &__content {
+    position: absolute;
+    left: 16px;
+    bottom: 16px;
+    &:hover {
+      color: $primary-white;
+      opacity: 1;
+    }
+  }
+  &__description {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 6px;
+  }
+  &__section {
+    gap: 6px;
+    display: flex;
+    align-items: center;
+  }
   &__image {
     border-radius: 20px;
   }

@@ -86,6 +86,10 @@ const getCategoryIcon = (category: string) => {
   @media (max-width: 800px) {
     max-width: 220px;
   }
+  &:hover {
+    transition: opacity 0.1s ease;
+    opacity: 0.5;
+  }
   &__image {
     width: 100%;
     border-radius: 20px;
