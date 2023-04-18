@@ -25,11 +25,7 @@
               {{ trendShow.title }}
             </div>
             <div class="trending-section-card__save">
-              <img
-                class="trending-section-card__save-icon"
-                src="../public/img/save-icon.svg"
-                alt=""
-              />
+              <img class="trending-section-card__save-icon" src="/img/save-icon.svg" alt="" />
             </div>
             <img
               class="trending-section-card__image"
@@ -51,11 +47,7 @@ const getTrendingShows = computed(() => {
   return showData.filter((show) => show.isTrending);
 });
 
-const getCategoryIcon = (category: string) => {
-  return category === "Movie"
-    ? "/public/img/card-icons/movie.svg"
-    : "/public/img/card-icons/series.svg";
-};
+const { getCategoryIcon } = useCategory();
 
 const slider = ref<any>();
 let isDown = false;
