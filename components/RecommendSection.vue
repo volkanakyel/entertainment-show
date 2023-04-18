@@ -2,129 +2,33 @@
   <div class="trending-section">
     <h2 class="section-title">Recommended for you</h2>
     <div class="trending-section__card-list">
-      <div class="trending-section-card">
+      <div v-for="trendShow in getRecommendedShow" class="trending-section-card">
         <img
           class="trending-section-card__image"
-          src="../assets/img/thumbnails/the-great-lands/regular/small.jpg"
-          alt=""
+          :src="trendShow.thumbnail.regular.small"
+          :alt="trendShow.title"
         />
         <div class="trending-section-card__description">
-          <p>2019</p>
+          <p>{{ trendShow.year }}</p>
           <div class="trending-section-card__section">
             <img src="../assets/img/movie-icon.svg" alt="" />
-            <p>Movie</p>
+            <p>{{ trendShow.category }}</p>
           </div>
-          <p>Movie</p>
-          <p>PG</p>
         </div>
-        <p class="trending-section-card__title">The Great Lands</p>
-      </div>
-      <div class="trending-section-card">
-        <img
-          class="trending-section-card__image"
-          src="../assets/img/thumbnails/the-great-lands/regular/small.jpg"
-          alt=""
-        />
-        <div class="trending-section-card__description">
-          <p>2019</p>
-          <div class="trending-section-card__section">
-            <img src="../assets/img/movie-icon.svg" alt="" />
-            <p>Movie</p>
-          </div>
-          <p>PG</p>
-        </div>
-        <p class="trending-section-card__title">The Great Lands</p>
-      </div>
-      <div class="trending-section-card">
-        <img
-          class="trending-section-card__image"
-          src="../assets/img/thumbnails/the-great-lands/regular/small.jpg"
-          alt=""
-        />
-        <div class="trending-section-card__description">
-          <p>2019</p>
-          <div class="trending-section-card__section">
-            <img src="../assets/img/movie-icon.svg" alt="" />
-            <p>Movie</p>
-          </div>
-          <p>Movie</p>
-          <p>PG</p>
-        </div>
-        <p class="trending-section-card__title">The Great Lands</p>
-      </div>
-      <div class="trending-section-card">
-        <img
-          class="trending-section-card__image"
-          src="../assets/img/thumbnails/the-great-lands/regular/small.jpg"
-          alt=""
-        />
-        <div class="trending-section-card__description">
-          <p>2019</p>
-          <div class="trending-section-card__section">
-            <img src="../assets/img/movie-icon.svg" alt="" />
-            <p>Movie</p>
-          </div>
-          <p>Movie</p>
-          <p>PG</p>
-        </div>
-        <p class="trending-section-card__title">The Great Lands</p>
-      </div>
-      <div class="trending-section-card">
-        <img
-          class="trending-section-card__image"
-          src="../assets/img/thumbnails/the-great-lands/regular/small.jpg"
-          alt=""
-        />
-        <div class="trending-section-card__description">
-          <p>2019</p>
-          <div class="trending-section-card__section">
-            <img src="../assets/img/movie-icon.svg" alt="" />
-            <p>Movie</p>
-          </div>
-          <p>Movie</p>
-          <p>PG</p>
-        </div>
-        <p class="trending-section-card__title">The Great Lands</p>
-      </div>
-      <div class="trending-section-card">
-        <img
-          class="trending-section-card__image"
-          src="../assets/img/thumbnails/the-great-lands/regular/small.jpg"
-          alt=""
-        />
-        <div class="trending-section-card__description">
-          <p>2019</p>
-          <div class="trending-section-card__section">
-            <img src="../assets/img/movie-icon.svg" alt="" />
-            <p>Movie</p>
-          </div>
-          <p>Movie</p>
-          <p>PG</p>
-        </div>
-        <p class="trending-section-card__title">The Great Lands</p>
-      </div>
-      <div class="trending-section-card">
-        <img
-          class="trending-section-card__image"
-          src="../assets/img/thumbnails/the-great-lands/regular/small.jpg"
-          alt=""
-        />
-        <div class="trending-section-card__description">
-          <p>2019</p>
-          <div class="trending-section-card__section">
-            <img src="../assets/img/movie-icon.svg" alt="" />
-            <p>Movie</p>
-          </div>
-          <p>Movie</p>
-          <p>PG</p>
-        </div>
-        <p class="trending-section-card__title">The Great Lands</p>
+        <p class="trending-section-card__title">{{ trendShow.title }}</p>
       </div>
     </div>
   </div>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { computed } from "vue";
+import { showData } from "../data/data";
+
+const getRecommendedShow = computed(() => {
+  return showData.filter((show) => !show.isTrending);
+});
+</script>
 
 <style lang="scss" scoped>
 .trending-section {
@@ -133,14 +37,13 @@
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
-    overflow: auto;
-    white-space: nowrap;
-    overflow-x: hidden;
-    cursor: grabbing;
+    cursor: pointer;
   }
 }
 .trending-section-card {
+  max-width: 280px;
   &__image {
+    width: 100%;
     border-radius: 20px;
   }
   &__description {

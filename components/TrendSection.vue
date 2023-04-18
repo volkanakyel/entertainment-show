@@ -12,35 +12,17 @@
           @mouseup="stopDragging"
           @mousedown="startDragging"
         >
-          <div class="trending-section-card">
-            <img class="trending-section-card__save" src="../assets/img/save-icon.svg" alt="" />
+          <div v-for="trendShow in getTrendingShows" class="trending-section-card">
+            <div class="trending-section-card__save">
+              <img
+                class="trending-section-card__save-icon"
+                src="../assets/img/save-icon.svg"
+                alt=""
+              />
+            </div>
             <img
               class="trending-section-card__image"
-              src="../assets/img/thumbnails/beyond-earth/trending/small.jpg"
-              alt=""
-            />
-          </div>
-          <div class="trending-section-card">
-            <img class="trending-section-card__save" src="../assets/img/save-icon.svg" alt="" />
-            <img
-              class="trending-section-card__image"
-              src="../assets/img/thumbnails/1998/trending/small.jpg"
-              alt=""
-            />
-          </div>
-          <div class="trending-section-card">
-            <img class="trending-section-card__save" src="../assets/img/save-icon.svg" alt="" />
-            <img
-              class="trending-section-card__image"
-              src="../assets/img/thumbnails/1998/trending/small.jpg"
-              alt=""
-            />
-          </div>
-          <div class="trending-section-card">
-            <img class="trending-section-card__save" src="../assets/img/save-icon.svg" alt="" />
-            <img
-              class="trending-section-card__image"
-              src="../assets/img/thumbnails/1998/trending/small.jpg"
+              :src="trendShow.thumbnail.trending?.small"
               alt=""
             />
           </div>
@@ -51,7 +33,13 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, onMounted, computed } from "vue";
+import { ref, computed } from "vue";
+import { showData } from "../data/data";
+
+const getTrendingShows = computed(() => {
+  return showData.filter((show) => show.isTrending);
+});
+
 const slider = ref<any>();
 let isDown = false;
 let startX = 0;
@@ -76,9 +64,6 @@ const mouveMouse = (e: any) => {
   const walk = (x - startX) * 3; //scroll-fast
   slider.value.scrollLeft = scrollLeft - walk;
 };
-onMounted(() => {
-  console.log(slider);
-});
 </script>
 
 <style lang="scss" scoped>
@@ -124,7 +109,7 @@ onMounted(() => {
   position: relative;
 
   &:not(:first-child) {
-    margin: 0 40px;
+    margin-left: 40px;
   }
   display: inline-block;
   &__image {
@@ -132,8 +117,26 @@ onMounted(() => {
   }
   &__save {
     position: absolute;
+    width: 32px;
+    height: 32px;
+    padding: 8px;
+    border-radius: 50%;
+    background: #10141e;
+    opacity: 0.5;
     top: 15px;
     right: 15px;
+    &:hover {
+      background: $primary-white;
+      opacity: 1;
+    }
+  }
+  &__save-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 0;
+    width: 11px;
   }
   &:hover {
     transition: opacity 0.1s ease;
