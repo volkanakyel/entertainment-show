@@ -3,13 +3,13 @@ export const showData = [
     title: "Beyond Earth",
     thumbnail: {
       trending: {
-        small: "/_nuxt/public/img/thumbnails/beyond-earth/trending/small.jpg",
-        large: "/_nuxt/public/img/thumbnails/beyond-earth/trending/large.jpg",
+        small: "/img/thumbnails/beyond-earth/trending/small.jpg",
+        large: "/img/thumbnails/beyond-earth/trending/large.jpg",
       },
       regular: {
-        small: "/_nuxt/public/img/thumbnails/beyond-earth/regular/small.jpg",
-        medium: "/_nuxt/public/img/thumbnails/beyond-earth/regular/medium.jpg",
-        large: "/_nuxt/public/img/thumbnails/beyond-earth/regular/large.jpg",
+        small: "/img/thumbnails/beyond-earth/regular/small.jpg",
+        medium: "/img/thumbnails/beyond-earth/regular/medium.jpg",
+        large: "/img/thumbnails/beyond-earth/regular/large.jpg",
       },
     },
     year: 2019,
@@ -22,13 +22,13 @@ export const showData = [
     title: "Bottom Gear",
     thumbnail: {
       trending: {
-        small: "/_nuxt/public/img/thumbnails/bottom-gear/trending/small.jpg",
-        large: "/_nuxt/public/img/thumbnails/bottom-gear/trending/large.jpg",
+        small: "/img/thumbnails/bottom-gear/trending/small.jpg",
+        large: "/img/thumbnails/bottom-gear/trending/large.jpg",
       },
       regular: {
-        small: "/_nuxt/public/img/thumbnails/bottom-gear/regular/small.jpg",
-        medium: "/_nuxt/public/img/thumbnails/bottom-gear/regular/medium.jpg",
-        large: "/_nuxt/public/img/thumbnails/bottom-gear/regular/large.jpg",
+        small: "/img/thumbnails/bottom-gear/regular/small.jpg",
+        medium: "/img/thumbnails/bottom-gear/regular/medium.jpg",
+        large: "/img/thumbnails/bottom-gear/regular/large.jpg",
       },
     },
     year: 2021,
@@ -41,13 +41,13 @@ export const showData = [
     title: "Undiscovered Cities",
     thumbnail: {
       trending: {
-        small: "/_nuxt/public/img/thumbnails/undiscovered-cities/trending/small.jpg",
-        large: "/_nuxt/public/img/thumbnails/undiscovered-cities/trending/large.jpg",
+        small: "/img/thumbnails/undiscovered-cities/trending/small.jpg",
+        large: "/img/thumbnails/undiscovered-cities/trending/large.jpg",
       },
       regular: {
-        small: "/_nuxt/public/img/thumbnails/undiscovered-cities/regular/small.jpg",
-        medium: "/_nuxt/public/img/thumbnails/undiscovered-cities/regular/medium.jpg",
-        large: "/_nuxt/public/img/thumbnails/undiscovered-cities/regular/large.jpg",
+        small: "/img/thumbnails/undiscovered-cities/regular/small.jpg",
+        medium: "/img/thumbnails/undiscovered-cities/regular/medium.jpg",
+        large: "/img/thumbnails/undiscovered-cities/regular/large.jpg",
       },
     },
     year: 2019,
@@ -60,13 +60,13 @@ export const showData = [
     title: "1998",
     thumbnail: {
       trending: {
-        small: "/_nuxt/public/img/thumbnails/1998/trending/small.jpg",
-        large: "/_nuxt/public/img/thumbnails/1998/trending/large.jpg",
+        small: "/img/thumbnails/1998/trending/small.jpg",
+        large: "/img/thumbnails/1998/trending/large.jpg",
       },
       regular: {
-        small: "/_nuxt/public/img/thumbnails/1998/regular/small.jpg",
-        medium: "/_nuxt/public/img/thumbnails/1998/regular/medium.jpg",
-        large: "/_nuxt/public/img/thumbnails/1998/regular/large.jpg",
+        small: "/img/thumbnails/1998/regular/small.jpg",
+        medium: "/img/thumbnails/1998/regular/medium.jpg",
+        large: "/img/thumbnails/1998/regular/large.jpg",
       },
     },
     year: 2021,
@@ -79,13 +79,13 @@ export const showData = [
     title: "Dark Side of the Moon",
     thumbnail: {
       trending: {
-        small: "/_nuxt/public/img/thumbnails/dark-side-of-the-moon/trending/small.jpg",
-        large: "/_nuxt/public/img/thumbnails/dark-side-of-the-moon/trending/large.jpg",
+        small: "/img/thumbnails/dark-side-of-the-moon/trending/small.jpg",
+        large: "/img/thumbnails/dark-side-of-the-moon/trending/large.jpg",
       },
       regular: {
-        small: "/_nuxt/public/img/thumbnails/dark-side-of-the-moon/regular/small.jpg",
-        medium: "/_nuxt/public/img/thumbnails/dark-side-of-the-moon/regular/medium.jpg",
-        large: "/_nuxt/public/img/thumbnails/dark-side-of-the-moon/regular/large.jpg",
+        small: "/img/thumbnails/dark-side-of-the-moon/regular/small.jpg",
+        medium: "/img/thumbnails/dark-side-of-the-moon/regular/medium.jpg",
+        large: "/img/thumbnails/dark-side-of-the-moon/regular/large.jpg",
       },
     },
     year: 2018,
@@ -98,9 +98,9 @@ export const showData = [
     title: "The Great Lands",
     thumbnail: {
       regular: {
-        small: "/_nuxt/public/img/thumbnails/the-great-lands/regular/small.jpg",
-        medium: "/_nuxt/public/img/thumbnails/the-great-lands/regular/medium.jpg",
-        large: "/_nuxt/public/img/thumbnails/the-great-lands/regular/large.jpg",
+        small: "/img/thumbnails/the-great-lands/regular/small.jpg",
+        medium: "/img/thumbnails/the-great-lands/regular/medium.jpg",
+        large: "/img/thumbnails/the-great-lands/regular/large.jpg",
       },
     },
     year: 2019,
@@ -113,9 +113,9 @@ export const showData = [
     title: "The Diary",
     thumbnail: {
       regular: {
-        small: "/_nuxt/public/img/thumbnails/the-diary/regular/small.jpg",
-        medium: "/_nuxt/public/img/thumbnails/the-diary/regular/medium.jpg",
-        large: "/_nuxt/public/img/thumbnails/the-diary/regular/large.jpg",
+        small: "/img/thumbnails/the-diary/regular/small.jpg",
+        medium: "/img/thumbnails/the-diary/regular/medium.jpg",
+        large: "/img/thumbnails/the-diary/regular/large.jpg",
       },
     },
     year: 2019,
@@ -128,9 +128,9 @@ export const showData = [
     title: "Earth’s Untouched",
     thumbnail: {
       regular: {
-        small: "/_nuxt/public/img/thumbnails/earths-untouched/regular/small.jpg",
-        medium: "/_nuxt/public/img/thumbnails/earths-untouched/regular/medium.jpg",
-        large: "/_nuxt/public/img/thumbnails/earths-untouched/regular/large.jpg",
+        small: "/img/thumbnails/earths-untouched/regular/small.jpg",
+        medium: "/img/thumbnails/earths-untouched/regular/medium.jpg",
+        large: "/img/thumbnails/earths-untouched/regular/large.jpg",
       },
     },
     year: 2017,
@@ -143,9 +143,9 @@ export const showData = [
     title: "No Land Beyond",
     thumbnail: {
       regular: {
-        small: "/_nuxt/public/img/thumbnails/no-land-beyond/regular/small.jpg",
-        medium: "/_nuxt/public/img/thumbnails/no-land-beyond/regular/medium.jpg",
-        large: "/_nuxt/public/img/thumbnails/no-land-beyond/regular/large.jpg",
+        small: "/img/thumbnails/no-land-beyond/regular/small.jpg",
+        medium: "/img/thumbnails/no-land-beyond/regular/medium.jpg",
+        large: "/img/thumbnails/no-land-beyond/regular/large.jpg",
       },
     },
     year: 2019,
@@ -158,9 +158,9 @@ export const showData = [
     title: "During the Hunt",
     thumbnail: {
       regular: {
-        small: "/_nuxt/public/img/thumbnails/during-the-hunt/regular/small.jpg",
-        medium: "/_nuxt/public/img/thumbnails/during-the-hunt/regular/medium.jpg",
-        large: "/_nuxt/public/img/thumbnails/during-the-hunt/regular/large.jpg",
+        small: "/img/thumbnails/during-the-hunt/regular/small.jpg",
+        medium: "/img/thumbnails/during-the-hunt/regular/medium.jpg",
+        large: "/img/thumbnails/during-the-hunt/regular/large.jpg",
       },
     },
     year: 2016,
@@ -173,9 +173,9 @@ export const showData = [
     title: "Autosport the Series",
     thumbnail: {
       regular: {
-        small: "/_nuxt/public/img/thumbnails/autosport-the-series/regular/small.jpg",
-        medium: "/_nuxt/public/img/thumbnails/autosport-the-series/regular/medium.jpg",
-        large: "/_nuxt/public/img/thumbnails/autosport-the-series/regular/large.jpg",
+        small: "/img/thumbnails/autosport-the-series/regular/small.jpg",
+        medium: "/img/thumbnails/autosport-the-series/regular/medium.jpg",
+        large: "/img/thumbnails/autosport-the-series/regular/large.jpg",
       },
     },
     year: 2016,
@@ -188,9 +188,9 @@ export const showData = [
     title: "Same Answer II",
     thumbnail: {
       regular: {
-        small: "/_nuxt/public/img/thumbnails/same-answer-2/regular/small.jpg",
-        medium: "/_nuxt/public/img/thumbnails/same-answer-2/regular/medium.jpg",
-        large: "/_nuxt/public/img/thumbnails/same-answer-2/regular/large.jpg",
+        small: "/img/thumbnails/same-answer-2/regular/small.jpg",
+        medium: "/img/thumbnails/same-answer-2/regular/medium.jpg",
+        large: "/img/thumbnails/same-answer-2/regular/large.jpg",
       },
     },
     year: 2017,
@@ -203,9 +203,9 @@ export const showData = [
     title: "Below Echo",
     thumbnail: {
       regular: {
-        small: "/_nuxt/public/img/thumbnails/below-echo/regular/small.jpg",
-        medium: "/_nuxt/public/img/thumbnails/below-echo/regular/medium.jpg",
-        large: "/_nuxt/public/img/thumbnails/below-echo/regular/large.jpg",
+        small: "/img/thumbnails/below-echo/regular/small.jpg",
+        medium: "/img/thumbnails/below-echo/regular/medium.jpg",
+        large: "/img/thumbnails/below-echo/regular/large.jpg",
       },
     },
     year: 2016,
@@ -218,9 +218,9 @@ export const showData = [
     title: "The Rockies",
     thumbnail: {
       regular: {
-        small: "/_nuxt/public/img/thumbnails/the-rockies/regular/small.jpg",
-        medium: "/_nuxt/public/img/thumbnails/the-rockies/regular/medium.jpg",
-        large: "/_nuxt/public/img/thumbnails/the-rockies/regular/large.jpg",
+        small: "/img/thumbnails/the-rockies/regular/small.jpg",
+        medium: "/img/thumbnails/the-rockies/regular/medium.jpg",
+        large: "/img/thumbnails/the-rockies/regular/large.jpg",
       },
     },
     year: 2015,
@@ -233,9 +233,9 @@ export const showData = [
     title: "Relentless",
     thumbnail: {
       regular: {
-        small: "/_nuxt/public/img/thumbnails/relentless/regular/small.jpg",
-        medium: "/_nuxt/public/img/thumbnails/relentless/regular/medium.jpg",
-        large: "/_nuxt/public/img/thumbnails/relentless/regular/large.jpg",
+        small: "/img/thumbnails/relentless/regular/small.jpg",
+        medium: "/img/thumbnails/relentless/regular/medium.jpg",
+        large: "/img/thumbnails/relentless/regular/large.jpg",
       },
     },
     year: 2017,
@@ -248,9 +248,9 @@ export const showData = [
     title: "Community of Ours",
     thumbnail: {
       regular: {
-        small: "/_nuxt/public/img/thumbnails/community-of-ours/regular/small.jpg",
-        medium: "/_nuxt/public/img/thumbnails/community-of-ours/regular/medium.jpg",
-        large: "/_nuxt/public/img/thumbnails/community-of-ours/regular/large.jpg",
+        small: "/img/thumbnails/community-of-ours/regular/small.jpg",
+        medium: "/img/thumbnails/community-of-ours/regular/medium.jpg",
+        large: "/img/thumbnails/community-of-ours/regular/large.jpg",
       },
     },
     year: 2018,
@@ -263,9 +263,9 @@ export const showData = [
     title: "Van Life",
     thumbnail: {
       regular: {
-        small: "/_nuxt/public/img/thumbnails/van-life/regular/small.jpg",
-        medium: "/_nuxt/public/img/thumbnails/van-life/regular/medium.jpg",
-        large: "/_nuxt/public/img/thumbnails/van-life/regular/large.jpg",
+        small: "/img/thumbnails/van-life/regular/small.jpg",
+        medium: "/img/thumbnails/van-life/regular/medium.jpg",
+        large: "/img/thumbnails/van-life/regular/large.jpg",
       },
     },
     year: 2015,
@@ -278,9 +278,9 @@ export const showData = [
     title: "The Heiress",
     thumbnail: {
       regular: {
-        small: "/_nuxt/public/img/thumbnails/the-heiress/regular/small.jpg",
-        medium: "/_nuxt/public/img/thumbnails/the-heiress/regular/medium.jpg",
-        large: "/_nuxt/public/img/thumbnails/the-heiress/regular/large.jpg",
+        small: "/img/thumbnails/the-heiress/regular/small.jpg",
+        medium: "/img/thumbnails/the-heiress/regular/medium.jpg",
+        large: "/img/thumbnails/the-heiress/regular/large.jpg",
       },
     },
     year: 2021,
@@ -293,9 +293,9 @@ export const showData = [
     title: "Off the Track",
     thumbnail: {
       regular: {
-        small: "/_nuxt/public/img/thumbnails/off-the-track/regular/small.jpg",
-        medium: "/_nuxt/public/img/thumbnails/off-the-track/regular/medium.jpg",
-        large: "/_nuxt/public/img/thumbnails/off-the-track/regular/large.jpg",
+        small: "/img/thumbnails/off-the-track/regular/small.jpg",
+        medium: "/img/thumbnails/off-the-track/regular/medium.jpg",
+        large: "/img/thumbnails/off-the-track/regular/large.jpg",
       },
     },
     year: 2017,
@@ -308,9 +308,9 @@ export const showData = [
     title: "Whispering Hill",
     thumbnail: {
       regular: {
-        small: "/_nuxt/public/img/thumbnails/whispering-hill/regular/small.jpg",
-        medium: "/_nuxt/public/img/thumbnails/whispering-hill/regular/medium.jpg",
-        large: "/_nuxt/public/img/thumbnails/whispering-hill/regular/large.jpg",
+        small: "/img/thumbnails/whispering-hill/regular/small.jpg",
+        medium: "/img/thumbnails/whispering-hill/regular/medium.jpg",
+        large: "/img/thumbnails/whispering-hill/regular/large.jpg",
       },
     },
     year: 2017,
@@ -323,9 +323,9 @@ export const showData = [
     title: "112",
     thumbnail: {
       regular: {
-        small: "/_nuxt/public/img/thumbnails/112/regular/small.jpg",
-        medium: "/_nuxt/public/img/thumbnails/112/regular/medium.jpg",
-        large: "/_nuxt/public/img/thumbnails/112/regular/large.jpg",
+        small: "/img/thumbnails/112/regular/small.jpg",
+        medium: "/img/thumbnails/112/regular/medium.jpg",
+        large: "/img/thumbnails/112/regular/large.jpg",
       },
     },
     year: 2013,
@@ -338,9 +338,9 @@ export const showData = [
     title: "Lone Heart",
     thumbnail: {
       regular: {
-        small: "/_nuxt/public/img/thumbnails/lone-heart/regular/small.jpg",
-        medium: "/_nuxt/public/img/thumbnails/lone-heart/regular/medium.jpg",
-        large: "/_nuxt/public/img/thumbnails/lone-heart/regular/large.jpg",
+        small: "/img/thumbnails/lone-heart/regular/small.jpg",
+        medium: "/img/thumbnails/lone-heart/regular/medium.jpg",
+        large: "/img/thumbnails/lone-heart/regular/large.jpg",
       },
     },
     year: 2017,
@@ -353,9 +353,9 @@ export const showData = [
     title: "Production Line",
     thumbnail: {
       regular: {
-        small: "/_nuxt/public/img/thumbnails/production-line/regular/small.jpg",
-        medium: "/_nuxt/public/img/thumbnails/production-line/regular/medium.jpg",
-        large: "/_nuxt/public/img/thumbnails/production-line/regular/large.jpg",
+        small: "/img/thumbnails/production-line/regular/small.jpg",
+        medium: "/img/thumbnails/production-line/regular/medium.jpg",
+        large: "/img/thumbnails/production-line/regular/large.jpg",
       },
     },
     year: 2018,
@@ -368,9 +368,9 @@ export const showData = [
     title: "Dogs",
     thumbnail: {
       regular: {
-        small: "/_nuxt/public/img/thumbnails/dogs/regular/small.jpg",
-        medium: "/_nuxt/public/img/thumbnails/dogs/regular/medium.jpg",
-        large: "/_nuxt/public/img/thumbnails/dogs/regular/large.jpg",
+        small: "/img/thumbnails/dogs/regular/small.jpg",
+        medium: "/img/thumbnails/dogs/regular/medium.jpg",
+        large: "/img/thumbnails/dogs/regular/large.jpg",
       },
     },
     year: 2016,
@@ -383,9 +383,9 @@ export const showData = [
     title: "Asia in 24 Days",
     thumbnail: {
       regular: {
-        small: "/_nuxt/public/img/thumbnails/asia-in-24-days/regular/small.jpg",
-        medium: "/_nuxt/public/img/thumbnails/asia-in-24-days/regular/medium.jpg",
-        large: "/_nuxt/public/img/thumbnails/asia-in-24-days/regular/large.jpg",
+        small: "/img/thumbnails/asia-in-24-days/regular/small.jpg",
+        medium: "/img/thumbnails/asia-in-24-days/regular/medium.jpg",
+        large: "/img/thumbnails/asia-in-24-days/regular/large.jpg",
       },
     },
     year: 2020,
@@ -398,9 +398,9 @@ export const showData = [
     title: "The Tasty Tour",
     thumbnail: {
       regular: {
-        small: "/_nuxt/public/img/thumbnails/the-tasty-tour/regular/small.jpg",
-        medium: "/_nuxt/public/img/thumbnails/the-tasty-tour/regular/medium.jpg",
-        large: "/_nuxt/public/img/thumbnails/the-tasty-tour/regular/large.jpg",
+        small: "/img/thumbnails/the-tasty-tour/regular/small.jpg",
+        medium: "/img/thumbnails/the-tasty-tour/regular/medium.jpg",
+        large: "/img/thumbnails/the-tasty-tour/regular/large.jpg",
       },
     },
     year: 2016,
@@ -413,9 +413,9 @@ export const showData = [
     title: "Darker",
     thumbnail: {
       regular: {
-        small: "/_nuxt/public/img/thumbnails/darker/regular/small.jpg",
-        medium: "/_nuxt/public/img/thumbnails/darker/regular/medium.jpg",
-        large: "/_nuxt/public/img/thumbnails/darker/regular/large.jpg",
+        small: "/img/thumbnails/darker/regular/small.jpg",
+        medium: "/img/thumbnails/darker/regular/medium.jpg",
+        large: "/img/thumbnails/darker/regular/large.jpg",
       },
     },
     year: 2017,
@@ -428,9 +428,9 @@ export const showData = [
     title: "Unresolved Cases",
     thumbnail: {
       regular: {
-        small: "/_nuxt/public/img/thumbnails/unresolved-cases/regular/small.jpg",
-        medium: "/_nuxt/public/img/thumbnails/unresolved-cases/regular/medium.jpg",
-        large: "/_nuxt/public/img/thumbnails/unresolved-cases/regular/large.jpg",
+        small: "/img/thumbnails/unresolved-cases/regular/small.jpg",
+        medium: "/img/thumbnails/unresolved-cases/regular/medium.jpg",
+        large: "/img/thumbnails/unresolved-cases/regular/large.jpg",
       },
     },
     year: 2018,
@@ -443,9 +443,9 @@ export const showData = [
     title: "Mission: Saturn",
     thumbnail: {
       regular: {
-        small: "/_nuxt/public/img/thumbnails/mission-saturn/regular/small.jpg",
-        medium: "/_nuxt/public/img/thumbnails/mission-saturn/regular/medium.jpg",
-        large: "/_nuxt/public/img/thumbnails/mission-saturn/regular/large.jpg",
+        small: "/img/thumbnails/mission-saturn/regular/small.jpg",
+        medium: "/img/thumbnails/mission-saturn/regular/medium.jpg",
+        large: "/img/thumbnails/mission-saturn/regular/large.jpg",
       },
     },
     year: 2017,

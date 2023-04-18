@@ -34,9 +34,7 @@ const getRecommendedShow = computed(() => {
 });
 
 const getCategoryIcon = (category: string) => {
-  return category === "Movie"
-    ? "/_nuxt/public/img/card-icons/movie.svg"
-    : "/_nuxt/public/img/card-icons/series.svg";
+  return category === "Movie" ? "/img/card-icons/movie.svg" : "/img/card-icons/series.svg";
 };
 </script>
 

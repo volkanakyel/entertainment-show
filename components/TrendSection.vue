@@ -53,8 +53,8 @@ const getTrendingShows = computed(() => {
 
 const getCategoryIcon = (category: string) => {
   return category === "Movie"
-    ? "/_nuxt/public/img/card-icons/movie.svg"
-    : "/_nuxt/public/img/card-icons/series.svg";
+    ? "/public/img/card-icons/movie.svg"
+    : "/public/img/card-icons/series.svg";
 };
 
 const slider = ref<any>();
