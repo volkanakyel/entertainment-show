@@ -1,14 +1,15 @@
 <template>
-  <div class="login-page">
-    <div class="login-wrapper">
-      <div class="login-container">
-        <h2 class="login-container__title">Login</h2>
-        <input class="login-container__input" placeholder="Email address" type="email" />
-        <input class="login-container__input" placeholder="Password" type="password" />
-        <button class="login-container__cta">Login to your account</button>
-        <div class="login-container__actions">
-          <p class="login-container__description">Don’t have an account?</p>
-          <a href="" class="login-container__redirect">Sign Up</a>
+  <div class="register-page">
+    <div class="register-wrapper">
+      <div class="register-container">
+        <h2 class="register-container__title">Sign up</h2>
+        <input class="register-container__input" placeholder="Email address" type="email" />
+        <input class="register-container__input" placeholder="Password" type="password" />
+        <input class="register-container__input" placeholder="Retype Password" type="password" />
+        <button class="register-container__cta">register to your account</button>
+        <div class="register-container__actions">
+          <p class="register-container__description">Already have an account?</p>
+          <a href="" class="register-container__redirect">Login</a>
         </div>
       </div>
     </div>
@@ -18,17 +19,17 @@
 <script lang="ts" setup></script>
 
 <style lang="scss" scoped>
-.login-page {
+.register-page {
   position: relative;
   height: 100vh;
 }
-.login-wrapper {
+.register-wrapper {
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.login-container {
+.register-container {
   background-color: $semi-dark-blue;
   padding: 32px;
   border-radius: 20px;
