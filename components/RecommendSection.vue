@@ -2,24 +2,24 @@
   <div class="trending-section">
     <h2 class="trending-section__title">Recommended for you</h2>
     <div class="trending-section__card-list">
-      <div v-for="trendShow in getRecommendedShow" class="trending-section-card">
+      <div v-for="trendShow in getRecommendedShow" class="trending-card">
         <div class="trending-section__save">
           <img class="trending-section__save-icon" src="/img/save-icon.svg" alt="" />
         </div>
         <img
-          class="trending-section-card__image"
+          class="trending-card__image"
           :src="trendShow.thumbnail.regular.small"
           :alt="trendShow.title"
         />
-        <div class="trending-section-card__description">
+        <div class="trending-card__description">
           <p>{{ trendShow.year }}</p>
-          <div class="trending-section-card__section">
+          <div class="trending-card__section">
             <img width="12" height="12" :src="getCategoryIcon(trendShow.category)" alt="" />
             <p>{{ trendShow.category }}</p>
           </div>
           <p>{{ trendShow.rating }}</p>
         </div>
-        <p class="trending-section-card__title">{{ trendShow.title }}</p>
+        <p class="trending-card__title">{{ trendShow.title }}</p>
       </div>
     </div>
   </div>
@@ -46,10 +46,13 @@ const { getCategoryIcon } = useCategory();
   &__card-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 32px 40px;
     cursor: pointer;
     @media (max-width: 800px) {
       gap: 28px;
+    }
+    @media (max-width: 450px) {
+      gap: 16px 14px;
     }
   }
   &__save {
@@ -76,18 +79,22 @@ const { getCategoryIcon } = useCategory();
     width: 11px;
   }
 }
-.trending-section-card {
+.trending-card {
   position: relative;
+  flex: 1 0 25%;
+  height: 100%;
+  min-width: 160px;
   max-width: 280px;
-  @media (max-width: 800px) {
-    max-width: 220px;
-  }
+  cursor: pointer;
   &:hover {
     transition: opacity 0.1s ease;
     opacity: 0.5;
   }
   &__image {
-    width: 100%;
+    object-fit: cover;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
     border-radius: 20px;
   }
   &__description {
