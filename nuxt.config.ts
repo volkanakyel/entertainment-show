@@ -8,6 +8,14 @@ const url = "https://vuetify3nuxt3starter.behonbaker.com/";
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
+  runtimeConfig: {
+    public: {
+      FIREBASE_API_KEY: process.env.FIREBASE_API_KEY,
+    },
+    private: {
+      FIREBASE_API_KEY: process.env.FIREBASE_API_KEY,
+    },
+  },
   // import styles
   css: ["@/assets/scss/main.scss"],
   vite: {
@@ -26,8 +34,8 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: "Vuetify 3 + Nuxt 3 Starter",
-      titleTemplate: "%s | Vuetify 3 + Nuxt 3 Starter",
+      title: title,
+      titleTemplate: "%s | Entertainment Show",
       link: [
         { rel: "stylesheet", href: "https://rsms.me/inter/inter.css" },
         { rel: "preconnect", href: "https://rsms.me/" },
