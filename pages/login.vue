@@ -27,6 +27,7 @@
 
 <script lang="ts" setup>
 import { ref } from "vue";
+const router = useRouter();
 const loginForm = ref({
   email: "",
   password: "",
@@ -37,6 +38,7 @@ const signIn = async () => {
     email: "",
     password: "",
   };
+  router.push({ path: "/" });
 };
 </script>
 
