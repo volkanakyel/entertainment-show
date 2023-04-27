@@ -3,20 +3,52 @@
     <div class="register-wrapper">
       <div class="register-container">
         <h2 class="register-container__title">Sign up</h2>
-        <input class="register-container__input" placeholder="Email address" type="email" />
-        <input class="register-container__input" placeholder="Password" type="password" />
-        <input class="register-container__input" placeholder="Retype Password" type="password" />
-        <button class="register-container__cta">register to your account</button>
+        <input
+          v-model="registerForm.email"
+          class="register-container__input"
+          placeholder="Email address"
+          type="email"
+        />
+        <input
+          v-model="registerForm.password"
+          class="register-container__input"
+          placeholder="Password"
+          type="password"
+        />
+        <!-- <input class="register-container__input" placeholder="Retype Password" type="password" /> -->
+        <button @click="registerUser" class="register-container__cta">
+          register to your account
+        </button>
         <div class="register-container__actions">
           <p class="register-container__description">Already have an account?</p>
-          <a href="" class="register-container__redirect">Login</a>
+          <nuxt-link class="register-container__redirect" to="/register">Login</nuxt-link>
         </div>
       </div>
     </div>
   </div>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { ref } from "vue";
+const registerForm = ref({
+  email: "",
+  password: "",
+});
+const registerMessage = ref();
+const registerUser = async () => {
+  const credentials = await createUser(registerForm.value.email, registerForm.value.password);
+  registerForm.value = {
+    email: "",
+    password: "",
+  };
+  if (credentials) {
+    registerMessage.value = `Successfully registered: ${credentials.user.email}`;
+    setTimeout(() => {
+      registerMessage.value = "";
+    }, 3000);
+  }
+};
+</script>
 
 <style lang="scss" scoped>
 .register-page {

@@ -3,12 +3,22 @@
     <div class="login-wrapper">
       <div class="login-container">
         <h2 class="login-container__title">Login</h2>
-        <input class="login-container__input" placeholder="Email address" type="email" />
-        <input class="login-container__input" placeholder="Password" type="password" />
-        <button class="login-container__cta">Login to your account</button>
+        <input
+          v-model="loginForm.email"
+          class="login-container__input"
+          placeholder="Email address"
+          type="email"
+        />
+        <input
+          v-model="loginForm.password"
+          class="login-container__input"
+          placeholder="Password"
+          type="password"
+        />
+        <button @click="signIn" class="login-container__cta">Login to your account</button>
         <div class="login-container__actions">
           <p class="login-container__description">Don’t have an account?</p>
-          <a href="" class="login-container__redirect">Sign Up</a>
+          <nuxt-link class="login-container__redirect" to="/register">Sign up</nuxt-link>
         </div>
       </div>
     </div>
@@ -16,18 +26,18 @@
 </template>
 
 <script lang="ts" setup>
-import { onMounted } from "vue";
-definePageMeta({
-  middleware: ["auth"],
+import { ref } from "vue";
+const loginForm = ref({
+  email: "",
+  password: "",
 });
-onMounted(async () => {
-  const email = "volkan_akyel@yahoo.fr";
-  const password = "123456";
-  // const credentials = await createUser(email, password);
-  //const credentials = await signInUser(email, password);
-  const credentials = await signOutUser();
-  console.log(credentials);
-});
+const signIn = async () => {
+  signInUser(loginForm.value.email, loginForm.value.password);
+  loginForm.value = {
+    email: "",
+    password: "",
+  };
+};
 </script>
 
 <style lang="scss" scoped>

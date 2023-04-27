@@ -25,6 +25,7 @@ export const signInUser = async (email: string, password: string) => {
 export const initUser = async () => {
   const auth = getAuth();
   const firebaseUser = useFirebaseUser();
+  // @ts-ignore
   firebaseUser.value = auth.currentUser;
   onAuthStateChanged(auth, (user) => {
     if (user) {
@@ -37,6 +38,7 @@ export const initUser = async () => {
       // User is signed out
       // ...
     }
+    // @ts-ignore
     firebaseUser.value = user;
   });
 };
