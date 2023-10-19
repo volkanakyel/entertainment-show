@@ -32,8 +32,6 @@ import { showData } from "../data/data";
 const getRecommendedShow = computed(() => {
   return showData.filter((show) => !show.isTrending);
 });
-
-const { getCategoryIcon } = useCategory();
 </script>
 
 <style lang="scss" scoped>

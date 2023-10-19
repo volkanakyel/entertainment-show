@@ -12,27 +12,12 @@
           @mouseup="stopDragging"
           @mousedown="startDragging"
         >
-          <div v-for="trendShow in getTrendingShows" class="trending-section-card">
-            <div class="trending-section-card__content">
-              <div class="trending-section-card__description">
-                <p>{{ trendShow.year }}</p>
-                <div class="trending-section-card__section">
-                  <img width="12" height="12" :src="getCategoryIcon(trendShow.category)" alt="" />
-                  <p>{{ trendShow.category }}</p>
-                </div>
-                <p>{{ trendShow.rating }}</p>
-              </div>
-              {{ trendShow.title }}
-            </div>
-            <div class="trending-section-card__save">
-              <img class="trending-section-card__save-icon" src="/img/save-icon.svg" alt="" />
-            </div>
-            <img
-              class="trending-section-card__image"
-              :src="trendShow.thumbnail.trending?.small"
-              alt=""
-            />
-          </div>
+          <TrendShowCard
+            v-for="(trendShow, index) in getTrendingShows"
+            :trendShow="trendShow"
+            :key="index"
+          />
+          :key="index"
         </div>
       </div>
     </div>
@@ -46,8 +31,6 @@ import { showData } from "../data/data";
 const getTrendingShows = computed(() => {
   return showData.filter((show) => show.isTrending);
 });
-
-const { getCategoryIcon } = useCategory();
 
 const slider = ref<any>();
 let isDown = false;
