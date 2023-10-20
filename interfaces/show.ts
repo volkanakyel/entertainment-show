@@ -19,3 +19,23 @@ export interface Trending {
   small: string;
   large: string;
 }
+
+export interface RecommendedShow {
+  category: string;
+  isBookmarked: boolean;
+  isTrending: boolean;
+  rating: string;
+  thumbnail: Regular;
+  title: string;
+  year: number;
+}
+
+export interface Regular {
+  regular: RegularImage;
+}
+
+export interface RegularImage {
+  small: string;
+  medium: string;
+  large: string;
+}
