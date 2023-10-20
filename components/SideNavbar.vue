@@ -4,9 +4,24 @@
       <div class="side-navbar__nav-items">
         <img class="side-navbar__logo" src="/img/logo.svg" alt="" />
         <img class="side-navbar__nav-icon" src="/img/menu-icon.svg" alt="" />
-        <img class="side-navbar__nav-icon" src="/img/movie-icon.svg" alt="" />
-        <img class="side-navbar__nav-icon" src="/img/series-icon.svg" alt="" />
-        <img class="side-navbar__nav-icon" src="/img/save-icon.svg" alt="" />
+        <img
+          class="side-navbar__nav-icon"
+          src="/img/movie-icon.svg"
+          @click="setShowCategory('movies')"
+          alt=""
+        />
+        <img
+          class="side-navbar__nav-icon"
+          src="/img/series-icon.svg"
+          @click="setShowCategory('series')"
+          alt=""
+        />
+        <img
+          class="side-navbar__nav-icon"
+          src="/img/save-icon.svg"
+          @click="setShowCategory('saved')"
+          alt=""
+        />
       </div>
       <div class="side-navbar__avatar">
         <img src="/img/avatar.svg" alt="" />
@@ -15,7 +30,13 @@
   </div>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { useCategoryStore } from "~/store/category";
+const setShowCategory = (category: string) => {
+  console.log(category);
+  useCategoryStore().switchShowCategory(category);
+};
+</script>
 
 <style scoped lang="scss">
 .side-navbar {
