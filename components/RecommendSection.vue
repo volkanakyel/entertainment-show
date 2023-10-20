@@ -13,7 +13,7 @@
 
 <script lang="ts" setup>
 import { computed } from "vue";
-import { showData } from "../data/data";
+import { showData } from "@/data/data";
 
 const getRecommendedShow = computed(() => {
   return showData.filter((show) => !show.isTrending);

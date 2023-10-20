@@ -16,6 +16,7 @@ export default defineNuxtConfig({
       FIREBASE_API_KEY: process.env.FIREBASE_API_KEY,
     },
   },
+  modules: ["@pinia/nuxt"],
   // import styles
   css: ["@/assets/scss/main.scss"],
   vite: {

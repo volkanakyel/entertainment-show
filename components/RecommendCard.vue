@@ -21,8 +21,7 @@
 </template>
 
 <script lang="ts" setup>
-// import { computed } from "vue";
-import { RecommendedShow } from "@/interfaces/show";
+import { type RecommendedShow } from "../interfaces/show";
 defineProps<{
   recommendedShow: RecommendedShow;
 }>();

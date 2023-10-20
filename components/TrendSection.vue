@@ -27,6 +27,7 @@
 <script lang="ts" setup>
 import { ref, computed } from "vue";
 import { showData } from "../data/data";
+import { type TrendingShow } from "../interfaces/show";
 
 const getTrendingShows = computed(() => {
   return showData.filter((show) => show.isTrending);
