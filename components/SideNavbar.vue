@@ -13,13 +13,13 @@
         <img
           class="side-navbar__nav-icon"
           src="/img/series-icon.svg"
-          @click="setShowCategory('series')"
+          @click="redirectToSeries"
           alt=""
         />
         <img
           class="side-navbar__nav-icon"
           src="/img/save-icon.svg"
-          @click="setShowCategory('saved')"
+          @click="redirectToBookmarked"
           alt=""
         />
       </div>
@@ -43,6 +43,14 @@ const redirectToMovies = (): void => {
 
 const redirectHome = (): void => {
   router.push("/");
+};
+
+const redirectToSeries = (): void => {
+  router.push("/series");
+};
+
+const redirectToBookmarked = (): void => {
+  router.push("/bookmarked");
 };
 </script>
 
