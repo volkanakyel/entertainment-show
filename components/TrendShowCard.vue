@@ -1,5 +1,5 @@
 <template>
-  <div class="trending-section-card">
+  <div class="trending-section-card" @mouseenter="isHovered = true" @mouseleave="isHovered = false">
     <div class="trending-section-card__content">
       <div class="trending-section-card__description">
         <p>{{ trendShow.year }}</p>
@@ -10,6 +10,10 @@
         <p>{{ trendShow.rating }}</p>
       </div>
       {{ trendShow.title }}
+    </div>
+    <div class="trending-section-card__play-button" v-if="isHovered">
+      <img src="../public/img/play-icon.svg" alt="Play" />
+      <span>Play</span>
     </div>
     <div class="trending-section-card__save">
       <img class="trending-section-card__save-icon" src="/img/save-icon.svg" alt="" />
@@ -24,6 +28,7 @@ import { type Show } from "../interfaces/show";
 defineProps<{
   trendShow: Show;
 }>();
+const isHovered = ref(false);
 </script>
 
 <style lang="scss" scoped>
@@ -32,6 +37,11 @@ defineProps<{
   display: inline-block;
   &:not(:first-child) {
     margin-left: 40px;
+  }
+  &:hover {
+    &__play-button {
+      display: flex;
+    }
   }
   &__content {
     position: absolute;
@@ -55,6 +65,21 @@ defineProps<{
   }
   &__image {
     border-radius: 20px;
+  }
+  &__play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 8px 12px;
+    border-radius: 25px;
+    z-index: 2;
+    img {
+      margin-right: 12px;
+    }
   }
   &__save {
     position: absolute;
