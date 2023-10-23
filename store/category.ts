@@ -7,21 +7,40 @@ export const useCategoryStore = defineStore({
   state: () => {
     return {
       selectedShowCategory: "all" as string,
-      seriesShow: [] as RecommendedShow[],
+      selectedShows: showData as RecommendedShow[],
+      hasTrendingShows: true as boolean,
     };
   },
   getters: {
-    getCategoryToShow: (state) => state.selectedShowCategory,
-    getSeriesShows: (state) => state.seriesShow,
+    getCategoryToShow: (state): string => state.selectedShowCategory,
+    getCategoryName: (state): string => {
+      if (state.selectedShowCategory === "Movie") return "Movies";
+      if (state.selectedShowCategory === "Series") return "TV Series";
+      if (state.selectedShowCategory === "Bookmarked") return "Bookmarked";
+      else return "Trending";
+    },
+    showTrendingShows: (state): boolean => (state.selectedShowCategory === "all" ? true : false),
+    getSelectedShows: (state): RecommendedShow[] => {
+      if (state.selectedShowCategory === "Series") {
+        return state.selectedShows.filter((series) =>
+          series.category.includes("Series")
+        ) as RecommendedShow[];
+      }
+      if (state.selectedShowCategory === "Movie") {
+        return state.selectedShows.filter((movies) =>
+          movies.category.includes("Movie")
+        ) as RecommendedShow[];
+      }
+      if (state.selectedShowCategory === "Bookmarked") {
+        return state.selectedShows.filter((shows) => shows.isBookmarked) as RecommendedShow[];
+      } else {
+        return state.selectedShows as RecommendedShow[];
+      }
+    },
   },
   actions: {
     switchShowCategory(value: string): void {
       this.selectedShowCategory = value;
-    },
-    fetchSeries(): void {
-      this.seriesShow = showData.filter((series) =>
-        series.category.includes("Series")
-      ) as RecommendedShow[];
     },
   },
 });

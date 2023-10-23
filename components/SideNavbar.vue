@@ -2,24 +2,29 @@
   <div class="side-navbar">
     <div class="side-navbar__container">
       <div class="side-navbar__nav-items">
-        <img class="side-navbar__logo" src="/img/logo.svg" @click="redirectHome" alt="" />
-        <img class="side-navbar__nav-icon" @click="redirectHome" src="/img/menu-icon.svg" alt="" />
+        <img class="side-navbar__logo" src="/img/logo.svg" @click="setShowCategory('all')" alt="" />
+        <img
+          class="side-navbar__nav-icon"
+          @click="setShowCategory('all')"
+          src="/img/menu-icon.svg"
+          alt=""
+        />
         <img
           class="side-navbar__nav-icon"
           src="/img/movie-icon.svg"
-          @click="redirectToMovies"
+          @click="setShowCategory('Movie')"
           alt=""
         />
         <img
           class="side-navbar__nav-icon"
           src="/img/series-icon.svg"
-          @click="redirectToSeries"
+          @click="setShowCategory('Series')"
           alt=""
         />
         <img
           class="side-navbar__nav-icon"
           src="/img/save-icon.svg"
-          @click="redirectToBookmarked"
+          @click="setShowCategory('Bookmarked')"
           alt=""
         />
       </div>
@@ -33,7 +38,6 @@
 <script lang="ts" setup>
 import { useCategoryStore } from "~/store/category";
 const setShowCategory = (category: string) => {
-  console.log(category);
   useCategoryStore().switchShowCategory(category);
 };
 const router = useRouter();

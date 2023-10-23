@@ -12,24 +12,19 @@
           placeholder="Search for movies or TV series"
         />
       </div>
-      <TrendSection />
-      <RecommendSection :sectionTitle="'Recommended for you'" />
+      <TrendSection v-if="showTrendingShows" />
+      <RecommendSection :showItems="getShows" :sectionTitle="getCategoryName" />
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { ref, onMounted } from "vue";
-definePageMeta({
-  middleware: ["auth"],
-});
-const router = useRouter();
-const { $auth } = useNuxtApp();
-const credentials = ref();
-const firebaseUser = useFirebaseUser();
-const signOut = async () => {
-  credentials.value = await signOutUser();
-};
+import type { RecommendedShow } from "~/interfaces/show";
+import { useCategoryStore } from "~/store/category";
+const store = useCategoryStore();
+const getShows = computed((): RecommendedShow[] => store.getSelectedShows);
+const showTrendingShows = computed((): boolean => store.showTrendingShows);
+const getCategoryName = computed((): string => store.getCategoryName);
 </script>
 
 <style scoped lang="scss">
