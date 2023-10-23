@@ -1,6 +1,6 @@
 <template>
   <div class="trending-section">
-    <h2 class="trending-section__title">Recommended for you</h2>
+    <h2 class="trending-section__title">{{ sectionTitle }}</h2>
     <div class="trending-section__card-list">
       <RecommendCard
         v-for="(recommendedShow, index) in getRecommendedShow"
@@ -18,6 +18,10 @@ import { showData } from "@/data/data";
 const getRecommendedShow = computed(() => {
   return showData.filter((show) => !show.isTrending);
 });
+
+defineProps<{
+  sectionTitle: string;
+}>();
 </script>
 
 <style lang="scss" scoped>

@@ -12,25 +12,12 @@
           placeholder="Search for movies or TV series"
         />
       </div>
-      <TrendSection />
-      <RecommendSection :sectionTitle="'Recommended for you'" />
+      <RecommendSection :sectionTitle="'Movies'" />
     </div>
   </div>
 </template>
 
-<script lang="ts" setup>
-import { ref, onMounted } from "vue";
-definePageMeta({
-  middleware: ["auth"],
-});
-const router = useRouter();
-const { $auth } = useNuxtApp();
-const credentials = ref();
-const firebaseUser = useFirebaseUser();
-const signOut = async () => {
-  credentials.value = await signOutUser();
-};
-</script>
+<script lang="ts" setup></script>
 
 <style scoped lang="scss">
 .main-container {

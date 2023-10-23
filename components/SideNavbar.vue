@@ -2,12 +2,12 @@
   <div class="side-navbar">
     <div class="side-navbar__container">
       <div class="side-navbar__nav-items">
-        <img class="side-navbar__logo" src="/img/logo.svg" alt="" />
-        <img class="side-navbar__nav-icon" src="/img/menu-icon.svg" alt="" />
+        <img class="side-navbar__logo" src="/img/logo.svg" @click="redirectHome" alt="" />
+        <img class="side-navbar__nav-icon" @click="redirectHome" src="/img/menu-icon.svg" alt="" />
         <img
           class="side-navbar__nav-icon"
           src="/img/movie-icon.svg"
-          @click="setShowCategory('movies')"
+          @click="redirectToMovies"
           alt=""
         />
         <img
@@ -35,6 +35,14 @@ import { useCategoryStore } from "~/store/category";
 const setShowCategory = (category: string) => {
   console.log(category);
   useCategoryStore().switchShowCategory(category);
+};
+const router = useRouter();
+const redirectToMovies = (): void => {
+  router.push("/movies");
+};
+
+const redirectHome = (): void => {
+  router.push("/");
 };
 </script>
 
