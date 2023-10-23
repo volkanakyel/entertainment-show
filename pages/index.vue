@@ -20,13 +20,13 @@
 </template>
 
 <script lang="ts" setup>
-import type { RecommendedShow } from "~/interfaces/show";
+import type { Show } from "~/interfaces/show";
 import { useCategoryStore } from "~/store/category";
 const searchShows = ref("");
 const store = useCategoryStore();
 const showTrendingShows = computed((): boolean => store.showTrendingShows);
 const getCategoryName = computed((): string => store.getCategoryName);
-const getFilteredShows = computed((): RecommendedShow[] => store.filterShows(searchShows.value));
+const getFilteredShows = computed((): Show[] => store.filterShows(searchShows.value));
 </script>
 
 <style scoped lang="scss">
