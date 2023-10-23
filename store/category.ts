@@ -1,13 +1,13 @@
 import { defineStore } from "pinia";
 import { showData } from "~/data/data";
-import { type RecommendedShow } from "~/interfaces/show";
+import { type Show } from "~/interfaces/show";
 
 export const useCategoryStore = defineStore({
   id: "category",
   state: () => {
     return {
       selectedShowCategory: "all" as string,
-      selectedShows: showData as RecommendedShow[],
+      selectedShows: showData as Show[],
       hasTrendingShows: true as boolean,
     };
   },
@@ -20,29 +20,27 @@ export const useCategoryStore = defineStore({
       else return "Trending";
     },
     showTrendingShows: (state): boolean => (state.selectedShowCategory === "all" ? true : false),
-    getSelectedShows: (state): RecommendedShow[] => {
+    getSelectedShows: (state): Show[] => {
       if (state.selectedShowCategory === "Series") {
-        return state.selectedShows.filter((series) =>
-          series.category.includes("Series")
-        ) as RecommendedShow[];
+        return state.selectedShows.filter((series) => series.category.includes("Series")) as Show[];
       }
       if (state.selectedShowCategory === "Movie") {
-        return state.selectedShows.filter((movies) =>
-          movies.category.includes("Movie")
-        ) as RecommendedShow[];
+        return state.selectedShows.filter((movies) => movies.category.includes("Movie")) as Show[];
       }
       if (state.selectedShowCategory === "Bookmarked") {
-        return state.selectedShows.filter((shows) => shows.isBookmarked) as RecommendedShow[];
+        return state.selectedShows.filter((shows) => shows.isBookmarked) as Show[];
       } else {
-        return state.selectedShows as RecommendedShow[];
+        return state.selectedShows as Show[];
       }
     },
+    getTrendingShows: (state): Show[] =>
+      state.selectedShows.filter((show) => show.isTrending) as Show[],
   },
   actions: {
     switchShowCategory(value: string): void {
       this.selectedShowCategory = value;
     },
-    filterShows(value: string): RecommendedShow[] {
+    filterShows(value: string): Show[] {
       return this.getSelectedShows.filter((show) =>
         show.title.toLocaleLowerCase().includes(value.toLowerCase())
       );

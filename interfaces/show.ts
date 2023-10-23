@@ -1,18 +1,16 @@
-export interface TrendingShow {
+export interface Show {
+  title: string;
+  thumbnail: Thumbnail;
+  year: number;
   category: string;
   rating: string;
-  title: string;
   isBookmarked: boolean;
   isTrending: boolean;
-  year: number;
-  thumbnail: Thumbnail;
 }
 
 export interface Thumbnail {
-  large: string;
-  medium: string;
-  small: string;
   trending?: Trending;
+  regular?: Regular;
 }
 
 export interface Trending {
@@ -20,21 +18,7 @@ export interface Trending {
   large: string;
 }
 
-export interface RecommendedShow {
-  category: string;
-  isBookmarked: boolean;
-  isTrending: boolean;
-  rating: string;
-  thumbnail: Regular;
-  title: string;
-  year: number;
-}
-
 export interface Regular {
-  regular: RegularImage;
-}
-
-export interface RegularImage {
   small: string;
   medium: string;
   large: string;
