@@ -10,10 +10,11 @@
           class="search-input__field"
           type="text"
           placeholder="Search for movies or TV series"
+          v-model="searchShows"
         />
       </div>
       <TrendSection v-if="showTrendingShows" />
-      <RecommendSection :showItems="getShows" :sectionTitle="getCategoryName" />
+      <RecommendSection :showItems="getFilteredShows" :sectionTitle="getCategoryName" />
     </div>
   </div>
 </template>
@@ -21,10 +22,12 @@
 <script lang="ts" setup>
 import type { RecommendedShow } from "~/interfaces/show";
 import { useCategoryStore } from "~/store/category";
+const searchShows = ref("");
 const store = useCategoryStore();
 const getShows = computed((): RecommendedShow[] => store.getSelectedShows);
 const showTrendingShows = computed((): boolean => store.showTrendingShows);
 const getCategoryName = computed((): string => store.getCategoryName);
+const getFilteredShows = computed((): RecommendedShow[] => store.filterShows(searchShows.value));
 </script>
 
 <style scoped lang="scss">

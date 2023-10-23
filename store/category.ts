@@ -42,6 +42,11 @@ export const useCategoryStore = defineStore({
     switchShowCategory(value: string): void {
       this.selectedShowCategory = value;
     },
+    filterShows(value: string): RecommendedShow[] {
+      return this.selectedShows.filter((show) =>
+        show.title.toLocaleLowerCase().includes(value.toLowerCase())
+      );
+    },
   },
 });
 

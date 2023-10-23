@@ -40,22 +40,6 @@ import { useCategoryStore } from "~/store/category";
 const setShowCategory = (category: string) => {
   useCategoryStore().switchShowCategory(category);
 };
-const router = useRouter();
-const redirectToMovies = (): void => {
-  router.push("/movies");
-};
-
-const redirectHome = (): void => {
-  router.push("/");
-};
-
-const redirectToSeries = (): void => {
-  router.push("/series");
-};
-
-const redirectToBookmarked = (): void => {
-  router.push("/bookmarked");
-};
 </script>
 
 <style scoped lang="scss">
