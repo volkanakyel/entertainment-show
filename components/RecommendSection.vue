@@ -2,11 +2,7 @@
   <div class="trending-section">
     <h2 class="trending-section__title">{{ sectionTitle }}</h2>
     <div class="trending-section__card-list">
-      <RecommendCard
-        v-for="(recommendedShow, index) in showItems"
-        :key="index"
-        :recommendedShow="recommendedShow"
-      />
+      <RecommendCard v-for="(Show, index) in showItems" :key="index" :Show="Show" />
     </div>
   </div>
 </template>
@@ -14,7 +10,7 @@
 <script lang="ts" setup>
 import { computed } from "vue";
 import { showData } from "@/data/data";
-import type { RecommendedShow } from "~/interfaces/show";
+import type { Show } from "~/interfaces/show";
 
 const getRecommendedShow = computed(() => {
   return showData.filter((show) => !show.isTrending);
@@ -22,7 +18,7 @@ const getRecommendedShow = computed(() => {
 
 const props = defineProps<{
   sectionTitle: string;
-  showItems: RecommendedShow[];
+  showItems: Show[];
 }>();
 </script>
 

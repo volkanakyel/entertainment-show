@@ -19,10 +19,10 @@
 </template>
 
 <script lang="ts" setup>
-import { type TrendingShow } from "../interfaces/show";
+import { type Show } from "../interfaces/show";
 
 defineProps<{
-  trendShow: TrendingShow;
+  trendShow: Show;
 }>();
 </script>
 

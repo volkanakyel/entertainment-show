@@ -13,11 +13,10 @@
           @mousedown="startDragging"
         >
           <TrendShowCard
-            v-for="(trendShow, index) in getTrendingShows"
+            v-for="(trendShow, index) in trendingShows"
             :trendShow="trendShow"
             :key="index"
           />
-          :key="index"
         </div>
       </div>
     </div>
@@ -27,11 +26,11 @@
 <script lang="ts" setup>
 import { ref, computed } from "vue";
 import { showData } from "../data/data";
-import { type TrendingShow } from "../interfaces/show";
+import { useCategoryStore } from "~/store/category";
+import type { Show } from "~/interfaces/show";
 
-const getTrendingShows = computed(() => {
-  return showData.filter((show) => show.isTrending);
-});
+const store = useCategoryStore();
+const trendingShows = computed((): Show[] => store.getTrendingShows);
 
 const slider = ref<any>();
 let isDown = false;
