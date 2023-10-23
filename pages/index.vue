@@ -24,7 +24,6 @@ import type { RecommendedShow } from "~/interfaces/show";
 import { useCategoryStore } from "~/store/category";
 const searchShows = ref("");
 const store = useCategoryStore();
-const getShows = computed((): RecommendedShow[] => store.getSelectedShows);
 const showTrendingShows = computed((): boolean => store.showTrendingShows);
 const getCategoryName = computed((): string => store.getCategoryName);
 const getFilteredShows = computed((): RecommendedShow[] => store.filterShows(searchShows.value));
