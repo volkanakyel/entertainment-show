@@ -3,7 +3,7 @@
     <h2 class="trending-section__title">{{ sectionTitle }}</h2>
     <div class="trending-section__card-list">
       <RecommendCard
-        v-for="(recommendedShow, index) in getRecommendedShow"
+        v-for="(recommendedShow, index) in showItems"
         :key="index"
         :recommendedShow="recommendedShow"
       />
@@ -14,13 +14,15 @@
 <script lang="ts" setup>
 import { computed } from "vue";
 import { showData } from "@/data/data";
+import type { RecommendedShow } from "~/interfaces/show";
 
 const getRecommendedShow = computed(() => {
   return showData.filter((show) => !show.isTrending);
 });
 
-defineProps<{
+const props = defineProps<{
   sectionTitle: string;
+  showItems: RecommendedShow[];
 }>();
 </script>
 

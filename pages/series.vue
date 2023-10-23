@@ -12,12 +12,26 @@
           placeholder="Search for movies or TV series"
         />
       </div>
-      <RecommendSection :sectionTitle="'Series'" />
+      <RecommendSection :showItems="getSeries" :sectionTitle="'Series'" />
     </div>
   </div>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { onMounted } from "vue";
+import type { RecommendedShow } from "~/interfaces/show";
+import { useCategoryStore } from "~/store/category";
+
+const store = useCategoryStore();
+const fetchSeries = () => {
+  store.fetchSeries();
+};
+
+onMounted(() => {
+  fetchSeries();
+});
+const getSeries = computed((): RecommendedShow[] => store.getSeriesShows);
+</script>
 
 <style scoped lang="scss">
 .main-container {
