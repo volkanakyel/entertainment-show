@@ -7,7 +7,7 @@
           ref="slider"
           :class="isActive"
           class="trending-section__card-list"
-          @mousemove.prevent="mouveMouse"
+          @mousemove.prevent="moveMouse"
           @mouseleave="stopDragging"
           @mouseup="stopDragging"
           @mousedown="startDragging"
@@ -25,7 +25,6 @@
 
 <script lang="ts" setup>
 import { ref, computed } from "vue";
-import { showData } from "../data/data";
 import { useCategoryStore } from "~/store/category";
 import type { Show } from "~/interfaces/show";
 
@@ -50,7 +49,7 @@ const stopDragging = function () {
   isDown = false;
 };
 
-const mouveMouse = (e: any) => {
+const moveMouse = (e: any) => {
   if (!isDown) return;
   const x = e.pageX - slider.value.offsetLeft;
   const walk = (x - startX) * 3; //scroll-fast

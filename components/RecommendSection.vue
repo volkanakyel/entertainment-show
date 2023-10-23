@@ -8,15 +8,9 @@
 </template>
 
 <script lang="ts" setup>
-import { computed } from "vue";
-import { showData } from "@/data/data";
 import type { Show } from "~/interfaces/show";
 
-const getRecommendedShow = computed(() => {
-  return showData.filter((show) => !show.isTrending);
-});
-
-const props = defineProps<{
+defineProps<{
   sectionTitle: string;
   showItems: Show[];
 }>();
