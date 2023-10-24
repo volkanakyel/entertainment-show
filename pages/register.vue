@@ -16,12 +16,12 @@
           type="password"
         />
         <!-- <input class="register-container__input" placeholder="Retype Password" type="password" /> -->
-        <button @click="registerUser" class="register-container__cta">
+        <button @click="handleLogin" class="register-container__cta">
           register to your account
         </button>
         <div class="register-container__actions">
           <p class="register-container__description">Already have an account?</p>
-          <nuxt-link class="register-container__redirect" to="/register">Login</nuxt-link>
+          <nuxt-link class="register-container__redirect" to="/login">Login</nuxt-link>
         </div>
       </div>
     </div>
@@ -34,18 +34,21 @@ const registerForm = ref({
   email: "",
   password: "",
 });
-const registerMessage = ref();
-const registerUser = async () => {
-  const credentials = await createUser(registerForm.value.email, registerForm.value.password);
-  registerForm.value = {
-    email: "",
-    password: "",
-  };
-  if (credentials) {
-    registerMessage.value = `Successfully registered: ${credentials.user.email}`;
-    setTimeout(() => {
-      registerMessage.value = "";
-    }, 3000);
+const loading = ref(false);
+const supabase = useSupabaseClient();
+const handleLogin = async () => {
+  try {
+    loading.value = true;
+    const { data, error } = await supabase.auth.signUp({
+      email: registerForm.value.email,
+      password: registerForm.value.password,
+    });
+    if (error) throw error;
+    alert("Check your email for the login link!");
+  } catch (error: any) {
+    alert(error.error_description || error.message);
+  } finally {
+    loading.value = false;
   }
 };
 </script>

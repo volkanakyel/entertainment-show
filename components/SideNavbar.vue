@@ -30,6 +30,7 @@
       </div>
       <div class="side-navbar__avatar">
         <img src="/img/avatar.svg" alt="" />
+        <img @click="logout" src="/img/logout.png" alt="" />
       </div>
     </div>
   </div>
@@ -39,6 +40,18 @@
 import { useCategoryStore } from "~/store/category";
 const setShowCategory = (category: string) => {
   useCategoryStore().switchShowCategory(category);
+};
+
+const router = useRouter();
+const supabase = useSupabaseClient();
+const logout = async () => {
+  try {
+    const { error } = await supabase.auth.signOut();
+    if (error) throw error;
+    router.push("/login");
+  } catch (error: any) {
+    console.log(error.message);
+  }
 };
 </script>
 

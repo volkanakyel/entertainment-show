@@ -22,6 +22,12 @@
 <script lang="ts" setup>
 import type { Show } from "~/interfaces/show";
 import { useCategoryStore } from "~/store/category";
+
+definePageMeta({
+  middleware: ["auth"],
+});
+
+const user = useSupabaseUser();
 const searchShows = ref("");
 const store = useCategoryStore();
 const showTrendingShows = computed((): boolean => store.showTrendingShows);

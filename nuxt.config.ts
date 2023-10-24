@@ -8,15 +8,9 @@ const url = "https://vuetify3nuxt3starter.behonbaker.com/";
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  runtimeConfig: {
-    public: {
-      FIREBASE_API_KEY: process.env.FIREBASE_API_KEY,
-    },
-    private: {
-      FIREBASE_API_KEY: process.env.FIREBASE_API_KEY,
-    },
-  },
+  runtimeConfig: {},
   modules: [
+    "@nuxtjs/supabase",
     [
       "@pinia/nuxt",
       {
@@ -24,6 +18,9 @@ export default defineNuxtConfig({
       },
     ],
   ],
+  supabase: {
+    redirect: false,
+  },
   imports: {
     dirs: ["stores"],
   },

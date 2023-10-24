@@ -27,18 +27,25 @@
 
 <script lang="ts" setup>
 import { ref } from "vue";
+const supabase = useSupabaseClient();
 const router = useRouter();
 const loginForm = ref({
   email: "",
   password: "",
 });
+const errorMsg = ref("");
 const signIn = async () => {
-  signInUser(loginForm.value.email, loginForm.value.password);
-  loginForm.value = {
-    email: "",
-    password: "",
-  };
-  router.push({ path: "/" });
+  try {
+    const { error } = await supabase.auth.signInWithPassword({
+      email: loginForm.value.email,
+      password: loginForm.value.password,
+    });
+    if (error) throw error;
+    router.push("/");
+  } catch (error: any) {
+    errorMsg.value = error.message;
+    console.log(errorMsg.value);
+  }
 };
 </script>
 
