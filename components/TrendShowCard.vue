@@ -18,7 +18,12 @@
     <div class="trending-section-card__save">
       <img class="trending-section-card__save-icon" src="/img/save-icon.svg" alt="" />
     </div>
-    <img class="trending-section-card__image" :src="trendShow.thumbnail.trending?.small" alt="" />
+    <nuxt-img
+      class="trending-section-card__image"
+      :src="trendShow.thumbnail.trending?.small"
+      alt=""
+      loading="lazy"
+    />
   </div>
 </template>
 

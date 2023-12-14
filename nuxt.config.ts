@@ -10,6 +10,7 @@ const url = "https://vuetify3nuxt3starter.behonbaker.com/";
 export default defineNuxtConfig({
   runtimeConfig: {},
   modules: [
+    "@nuxt/image",
     "@nuxtjs/supabase",
     [
       "@pinia/nuxt",

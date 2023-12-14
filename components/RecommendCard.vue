@@ -8,12 +8,18 @@
         <img src="../public/img/play-icon.svg" alt="Play" />
         <span>Play</span>
       </div>
-      <img class="trending-card__image" :src="Show.thumbnail.regular.small" :alt="Show.title" />
+      <nuxt-img
+        class="trending-card__image"
+        :src="Show.thumbnail.regular.small"
+        :alt="Show.title"
+        loading="lazy"
+      />
     </div>
     <div class="trending-card__description">
       <p>{{ Show.year }}</p>
       <div class="trending-card__section">
-        <img width="12" height="12" :src="getCategoryIcon(Show.category)" alt="" />
+        <nuxt-img width="12" height="12" :src="getCategoryIcon(Show.category)" loading="lazy" />
+        <img />
         <p>{{ Show.category }}</p>
       </div>
       <p>{{ Show.rating }}</p>
